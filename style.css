@@ -1,0 +1,109 @@
+/* para que algo de acá vaya a html y busque una etiqueta especifica y se pueda llamar, se debe citar etiqueta{} */
+   
+body{
+
+    /* modificar margenes */
+        /* aplicable para los 4 lados (se puede especificar arriba, abajo o lados) */
+    
+        /* se da 0 de margenes y 0 de espacio entre relleno */
+            margin: 0px;
+            padding: 0;
+
+
+    /* para color de fondo */
+        background-color: #FFF8D6;
+
+    /* para colocar una imagen de fondo */
+        /* se puede crear carpeta donde se van a guardar imagenes, se arrastra la imagen que se quiere desde las descargas a public
+        y ya después si se puede colocar el siguiente código */
+            /* background: url(public/photo-1476673160081-cf065607f449.avif); */
+        
+        /* para que la imagen se adapte al contenedor */
+            /* background-size: cover; */
+
+    /* cambio tipo de texto desde google */
+    font-family: 'Roboto Mono', monospace;
+}
+
+.article1{
+
+    color: #594619;
+
+}
+
+header{
+
+    /* lauch grid para crear cajita en header */
+    display: grid;
+
+    /* generar el grid en estructura de columnas */
+    /* aquí vamos a dividir todo el header en 2 columnas para poder centrar la lista de abajo centrado en la segunda mitado, centrado */
+    grid-template-columns: 1fr 1fr;
+
+}
+
+header .TituloMain{
+
+    /* agregar margen al titulo para que se de margen con la regla anterior de respetar espaciado de cuadriculas */
+    margin-left: 50px;
+
+}
+
+
+ul{
+
+    margin-top: 60px;
+
+    /* para q la lista no quede con los puntos o numeros de lista */
+    list-style: none;
+
+    /* pushear flexbox para orientar texto */
+    display: flex ;
+
+    /* justificar texto al centro */
+    justify-content: center;
+
+    /* separación entre textos */
+    gap: 20px;
+
+    }
+
+    /* cambiar de color las listas de arriba en el heather */
+ul li a{
+    color: rgb(207, 129, 73);
+}
+
+
+
+.button{
+    display: inline-block;
+
+    /* genera un ligero redondeo en los bordes */
+    border-radius: 3px;
+
+    /* esto es el bordeado del boton arriba y al lado, si se colocan 2vlrs más, se agrega borde abajo e izq */
+    /* va en sentido de las manecillas del reloj */
+    padding: 7px 12px;
+
+    /* borde general al rededor del botón */
+    border: 1px solid #D5D5D5;
+
+    /* color de fondo en difuminado entre los dos colores que se ponen */
+    background-image: linear-gradient(#EEE, #DDD);
+
+    /* fuente usada */
+    font: 700 13px/18px Helvetica, arial;
+
+}
+    /* este boton solo funciona para que después de todo lo anterior, si el estado es exitoso, cambie los parametros */
+    /* anteriores a los siguientes */
+.button--state-success{
+    color: #FFF;
+    background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+    border-color: #4A993E;
+
+}
+    /* si el estado resulta negativo, en vez de hacer el cambio aterior, se realizan estos cambios */
+.button--state-danger{
+    color: #900;
+}
