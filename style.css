@@ -21,6 +21,11 @@ body{
         /* para que la imagen se adapte al contenedor */
             /* background-size: cover; */
 
+        /* para que cuando se pone imagen, esta imagen no se repita en bicle, se coloca */
+            /* background-repeat: no-repeat; */
+    
+
+
     /* cambio tipo de texto desde google */
     font-family: 'Roboto Mono', monospace;
 }
@@ -74,6 +79,13 @@ ul li a{
 }
 
 
+    /* este hover lo que hace es cambiar la forma en la que interactuan los elementos al momento de poner el cursor encima */
+ul li a:hover{
+    color: #aaaa;
+    text-decoration: underline;
+}
+
+
 
 .button{
     display: inline-block;
@@ -106,4 +118,39 @@ ul li a{
     /* si el estado resulta negativo, en vez de hacer el cambio aterior, se realizan estos cambios */
 .button--state-danger{
     color: #900;
+}
+
+
+/* MEDIA QERI PARA RESPONSIVE */
+@media(min-width: 768px ) and (max-width: 1440px ) {
+    body{
+        font-size: 2em;
+        background: url(public/photo-1476673160081-cf065607f449.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(min-width: 720px ) and (max-width: 767px ) {
+    body{
+        font-size: 1em;
+        background-color: rgb(204, 165, 165);
+    }
+}
+
+@media(min-width: 360px ) and (max-width: 675px ) {
+    body{
+        font-size: 1em;
+        background-color: rgb(210, 255, 232);
+    }
+
+    /* en esta caracteristica cambia la cant. columnas en el header (titulo e listado inicio) */
+    header{
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        
+    }
+    
 }
